@@ -66,19 +66,18 @@ namespace BMI_Calculator
             }
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
+        
 
+        private void radioButton1_MouseClick(object sender, MouseEventArgs e)
+        {
+            label3.Text = "Weight(Pound)";
+            label2.Text = "Height(Inch)";
         }
 
-        private void HeightBox_TextChanged(object sender, EventArgs e)
+        private void radioButton2_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
+            label3.Text = "Weight(Kg)";
+            label2.Text = "Height(M)";
         }
     }
 }
