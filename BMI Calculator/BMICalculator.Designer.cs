@@ -53,7 +53,6 @@
             this.Reset.TabIndex = 1;
             this.Reset.Text = "Reset";
             this.Reset.UseVisualStyleBackColor = false;
-            this.Reset.Click += new System.EventHandler(this.Reset_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -65,11 +64,11 @@
             this.tableLayoutPanel1.Controls.Add(this.HeightBox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.Multiline, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.Reset, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.Calculator, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.radioButton2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.radioButton1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Reset, 1, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
@@ -88,15 +87,16 @@
             this.WeightBox.Name = "WeightBox";
             this.WeightBox.Size = new System.Drawing.Size(100, 46);
             this.WeightBox.TabIndex = 6;
+            this.WeightBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.WeightBox_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 144);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 72);
+            this.label2.Size = new System.Drawing.Size(116, 72);
             this.label2.TabIndex = 5;
-            this.label2.Text = "My Weight";
+            this.label2.Text = "My Height";
             // 
             // HeightBox
             // 
@@ -104,6 +104,7 @@
             this.HeightBox.Name = "HeightBox";
             this.HeightBox.Size = new System.Drawing.Size(100, 46);
             this.HeightBox.TabIndex = 4;
+            this.HeightBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HeightBox_KeyPress);
             // 
             // textBox1
             // 
@@ -168,7 +169,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Imperial";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.radioButton1_MouseClick);
+            this.radioButton1.Click += new System.EventHandler(this.radioButton1_Click);
             // 
             // Form1
             // 

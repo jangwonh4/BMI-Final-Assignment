@@ -24,25 +24,7 @@ namespace BMI_Calculator
             InitializeComponent();
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Reset_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void Calculator_Click(object sender, EventArgs e)
         {
@@ -78,6 +60,41 @@ namespace BMI_Calculator
         {
             label3.Text = "Weight(Kg)";
             label2.Text = "Height(M)";
+        }
+        
+
+        
+
+        private void radioButton1_Click(object sender, EventArgs e)
+        {
+            label3.Text = "Weight(Pound)";
+            label2.Text = "Height(Inch)";
+        }
+        //Block Letter in Text Box
+        private void HeightBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar > (char)Keys.D9 || e.KeyChar < (char)Keys.D0) && e.KeyChar != (char)Keys.Back && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+            //Edit: Alternative
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void WeightBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar > (char)Keys.D9 || e.KeyChar < (char)Keys.D0) && e.KeyChar != (char)Keys.Back && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+            //Edit: Alternative
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
         }
     }
 }
