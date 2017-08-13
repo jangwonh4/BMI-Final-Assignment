@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.HeightBox = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Multiline = new System.Windows.Forms.TextBox();
+            this.TextResult = new System.Windows.Forms.TextBox();
             this.Calculator = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -63,7 +63,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.HeightBox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.Multiline, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.TextResult, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.Calculator, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.radioButton2, 1, 0);
@@ -116,14 +116,17 @@
             this.textBox1.Size = new System.Drawing.Size(274, 46);
             this.textBox1.TabIndex = 7;
             // 
-            // Multiline
+            // TextResult
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.Multiline, 2);
-            this.Multiline.Location = new System.Drawing.Point(3, 363);
-            this.Multiline.Multiline = true;
-            this.Multiline.Name = "Multiline";
-            this.Multiline.Size = new System.Drawing.Size(274, 47);
-            this.Multiline.TabIndex = 9;
+            this.TextResult.BackColor = System.Drawing.Color.DarkGray;
+            this.tableLayoutPanel1.SetColumnSpan(this.TextResult, 2);
+            this.TextResult.ForeColor = System.Drawing.Color.Maroon;
+            this.TextResult.Location = new System.Drawing.Point(3, 363);
+            this.TextResult.Multiline = true;
+            this.TextResult.Name = "TextResult";
+            this.TextResult.Size = new System.Drawing.Size(274, 47);
+            this.TextResult.TabIndex = 9;
+            
             // 
             // Calculator
             // 
@@ -201,7 +204,7 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.TextBox HeightBox;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox Multiline;
+        private System.Windows.Forms.TextBox TextResult;
         private System.Windows.Forms.Button Calculator;
         private System.Windows.Forms.Label label3;
     }

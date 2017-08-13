@@ -12,7 +12,7 @@ using System.Windows.Forms;
  * Student Number : 300932496
  * Modified : August, 3, 2017
  * Description : Create BMI Calculator
- * Version : 0.1 - Create UI Controls
+ * Version : 0.7 - Add BMI SCALE Result
  */
 
 namespace BMI_Calculator
@@ -24,8 +24,12 @@ namespace BMI_Calculator
             InitializeComponent();
         }
 
-        
 
+
+        
+            
+
+        
         private void Calculator_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked == true)
@@ -35,7 +39,26 @@ namespace BMI_Calculator
                 //BMI = Kg / (Hegiht(m) * Height(m))
                 double bmi = w / (h * h);
 
-                textBox1.Text = "BMI : " + Math.Round(bmi, 2).ToString();//
+                string result1 = null;
+                if (bmi < 18.5)
+                {
+                    result1 = "Underweignt";
+                }
+                else if (bmi > 18.5 && bmi < 24.9)
+                {
+                    result1 = "Normal";
+                }
+                else if (bmi > 25 && bmi < 29.9)
+                {
+                    result1 = "OverWeight";
+                }
+                else if (bmi > 30)
+                {
+                    result1 = "Obese";
+                }
+                TextResult.Text = result1;
+
+                textBox1.Text = "BMI : " + Math.Round(bmi, 1).ToString();//
             }
             else if(radioButton2.Checked == true)
             {
@@ -44,7 +67,26 @@ namespace BMI_Calculator
                 //BMI = Pound*703 / (Hegiht(Inch) * Height(Inch))
                 double bmi = w*703 / (h * h);
 
-                textBox1.Text = "BMI : " + Math.Round(bmi, 2).ToString();
+                string result1 = null;
+                if (bmi < 18.5)
+                {
+                    result1 = "Underweignt";
+                }
+                else if (bmi > 18.5 && bmi < 24.9)
+                {
+                    result1 = "Normal";
+                }
+                else if (bmi > 25 && bmi < 29.9)
+                {
+                    result1 = "OverWeight";
+                }
+                else if (bmi > 30)
+                {
+                    result1 = "Obese";
+                }
+                TextResult.Text = result1;
+
+                textBox1.Text = "BMI : " + Math.Round(bmi, 1).ToString();
             }
         }
 
@@ -96,5 +138,7 @@ namespace BMI_Calculator
                 e.Handled = true;
             }
         }
+
+        
     }
 }
