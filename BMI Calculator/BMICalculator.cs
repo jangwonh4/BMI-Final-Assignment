@@ -113,6 +113,8 @@ namespace BMI_Calculator
             label2.Text = "Height(Inch)";
         }
         //Block Letter in Text Box
+        //Block Key 
+        //https://stackoverflow.com/questions/6740605/c-sharp-disabling-keyboard-input-into-a-textbox
         private void HeightBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar > (char)Keys.D9 || e.KeyChar < (char)Keys.D0) && e.KeyChar != (char)Keys.Back && e.KeyChar != '.')
@@ -138,7 +140,13 @@ namespace BMI_Calculator
                 e.Handled = true;
             }
         }
-
-        
+        //add reset button
+        private void Reset_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            WeightBox.Clear();
+            HeightBox.Clear();
+            TextResult.Clear();
+        }
     }
 }

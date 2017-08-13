@@ -53,6 +53,7 @@
             this.Reset.TabIndex = 1;
             this.Reset.Text = "Reset";
             this.Reset.UseVisualStyleBackColor = false;
+            this.Reset.Click += new System.EventHandler(this.Reset_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -126,7 +127,6 @@
             this.TextResult.Name = "TextResult";
             this.TextResult.Size = new System.Drawing.Size(274, 47);
             this.TextResult.TabIndex = 9;
-            
             // 
             // Calculator
             // 
