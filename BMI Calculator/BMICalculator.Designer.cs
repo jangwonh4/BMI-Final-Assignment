@@ -60,9 +60,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.WeightBox, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.HeightBox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.TextResult, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.Calculator, 0, 3);
@@ -70,6 +68,8 @@
             this.tableLayoutPanel1.Controls.Add(this.radioButton2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.radioButton1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.Reset, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.WeightBox, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.HeightBox, 1, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
@@ -84,7 +84,7 @@
             // 
             // WeightBox
             // 
-            this.WeightBox.Location = new System.Drawing.Point(143, 147);
+            this.WeightBox.Location = new System.Drawing.Point(143, 75);
             this.WeightBox.Name = "WeightBox";
             this.WeightBox.Size = new System.Drawing.Size(100, 46);
             this.WeightBox.TabIndex = 6;
@@ -101,7 +101,7 @@
             // 
             // HeightBox
             // 
-            this.HeightBox.Location = new System.Drawing.Point(143, 75);
+            this.HeightBox.Location = new System.Drawing.Point(143, 147);
             this.HeightBox.Name = "HeightBox";
             this.HeightBox.Size = new System.Drawing.Size(100, 46);
             this.HeightBox.TabIndex = 4;
@@ -158,7 +158,7 @@
             this.radioButton2.Size = new System.Drawing.Size(134, 43);
             this.radioButton2.TabIndex = 2;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Metric Units";
+            this.radioButton2.Text = "Imperial";
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.Click += new System.EventHandler(this.radioButton2_Click);
             // 
@@ -167,10 +167,10 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(3, 3);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(134, 43);
+            this.radioButton1.Size = new System.Drawing.Size(130, 43);
             this.radioButton1.TabIndex = 1;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Imperial";
+            this.radioButton1.Text = "Metric";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.Click += new System.EventHandler(this.radioButton1_Click);
             // 

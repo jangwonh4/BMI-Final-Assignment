@@ -100,8 +100,8 @@ namespace BMI_Calculator
 
         private void radioButton2_Click(object sender, EventArgs e)
         {
-            label3.Text = "Weight(Kg)";
-            label2.Text = "Height(M)";
+            label3.Text = "Weight(Pound)";
+            label2.Text = "Height(Inch)";
         }
         
 
@@ -109,8 +109,9 @@ namespace BMI_Calculator
 
         private void radioButton1_Click(object sender, EventArgs e)
         {
-            label3.Text = "Weight(Pound)";
-            label2.Text = "Height(Inch)";
+            label3.Text = "Weight(Kg)";
+            label2.Text = "Height(M)";
+            
         }
         //Block Letter in Text Box
         //Block Key 
